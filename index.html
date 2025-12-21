@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deacon Real Estate | About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/justlivindy_cover.jpeg" alt="Deacon Real Estate logo" />
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">About Me</a>
+        <a class="nav-link" href="why-choose-me.html">Why Choose Me</a>
+        <a class="nav-link" href="agent-hub.html">Agent Hub</a>
+        <a class="nav-link nav-cta" href="book.html">Book a Meeting</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">Hi, I’m Jacob Deacon.</h1>
+          <p class="hero-subtitle">
+            I help clients buy, sell, and invest with confidence—backed by a modern, relationship-first approach.
+          </p>
+
+          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform" target="_blank" rel="noopener">
+            Connect With Me
+          </a>
+
+          <p class="hero-note">Quick response. No pressure.</p>
+        </div>
+
+        <div class="hero-media">
+          <div class="video-card">
+            <!-- OPTION A: YouTube/Vimeo Embed (recommended) -->
+            <!-- Replace VIDEO_URL with the actual YouTube/Vimeo embed link -->
+            <iframe
+              class="video-frame"
+              src="VIDEO_URL"
+              title="Jacob Deacon Introduction Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+
+            <!-- OPTION B: Self-hosted MP4 (use if they send you an mp4 file) -->
+            <!--
+            <video class="video-native" controls playsinline preload="metadata">
+              <source src="assets/video/jacob-intro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="bio">
+      <div class="container bio-grid">
+        <div class="bio-card">
+          <h2 class="section-title">My Story</h2>
+
+          <!-- Replace this text with the client’s bio copy -->
+          <p>
+            [Bio paragraph 1 goes here…]
+          </p>
+          <p>
+            [Bio paragraph 2 goes here…]
+          </p>
+
+          <div class="bio-actions">
+            <a class="btn secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform" target="_blank" rel="noopener">
+              Connect With Me
+            </a>
+          </div>
+        </div>
+
+        <div class="bio-side">
+          <!-- Optional: headshot or brand image -->
+          <div class="image-card">
+            <img class="headshot1" src="assets/jake1.jpg" alt="Headshot">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Deacon Real Estate. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="https://www.facebook.com/deaconrealestate12" target="_blank" rel="noopener">Facebook</a>
+        <span>•</span>
+        <a href="https://www.instagram.com/jacob_deacon1" target="_blank" rel="noopener">Instagram</a>
+        <span>•</span>
+        <a href="https://www.zillow.com/profile/Jacob%20deacon11" target="_blank" rel="noopener">Zillow</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
