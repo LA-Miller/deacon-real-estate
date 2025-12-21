@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Hub | Deacon Real Estate</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.jpg" alt="Deacon Real Estate Logo" class="brand-logo">
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">About Me</a>
+                <a href="why-choose-me.html" class="nav-link">Why Choose Me</a>
+                <a href="agent-hub.html" class="nav-link active">Agent Hub</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
+                    class="nav-link nav-cta" target="_blank">
+                    Book a Meeting
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section class="page-intro">
+            <div class="container">
+                <h1>Agent Hub</h1>
+
+                <p class="intro-subtext">
+                    Compare your brokerage with eXp’s numbers. I wasn’t always with eXp, but
+                    joining completely changed my career. Your brokerage shouldn’t define you —
+                    it should amplify you, support your growth, and help you push toward success
+                    while putting more money back in your pocket. eXp gives you the tools to build
+                    a real personal brand, keep more of your income, and even grow through a
+                    recruitment model that rewards you for helping other agents win. This page
+                    lets you plug in your numbers and see the difference for yourself.
+                </p>
+
+                <a class="btn primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
+                    target="_blank">
+                    Connect With Me
+                </a>
+            </div>
+        </section>
+
+        <!-- CALCULATOR -->
+        <section class="calculator-section">
+            <div class="container">
+
+                <div class="embed-card">
+                    <h2>Brokerage Comparison Calculator</h2>
+
+                    <!-- Google Sheet Embed -->
+                    <iframe src="https://docs.google.com/spreadsheets/d/1FYialutuYEkKSxNFDsKVxgvFT5Ax1dHf/preview"
+                        class="calculator-frame" loading="lazy">
+                    </iframe>
+
+                    <p class="embed-note">
+                        Enter your current brokerage numbers to compare them directly with eXp.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FUTURE RESOURCES PLACEHOLDER -->
+        <section class="future-resources">
+            <div class="container">
+                <div class="resource-card">
+                    <h3>More Agent Resources Coming Soon</h3>
+                    <p>
+                        This space is reserved for additional tools, guides, and resources for
+                        agents considering their next move.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <a class="btn primary"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
+                    target="_blank">
+                    Connect With Me
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Deacon Real Estate</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

@@ -201,3 +201,52 @@ a { color: inherit; text-decoration: none; }
   .hero-grid, .bio-grid { grid-template-columns: 1fr; }
   .nav { gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 }
+
+.calculator-section {
+  padding: 48px 0;
+}
+
+.embed-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.future-resources {
+  padding: 40px 0;
+}
+
+.resource-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Agent Hub Calculator */
+.calculator-frame {
+  width: 100%;
+  height: 800px;              /* <-- THIS fixes the issue */
+  border: none;
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+/* Make it taller on larger screens */
+@media (min-width: 1024px) {
+  .calculator-frame {
+    height: 900px;
+  }
+}
+
+/* Ensure container doesn't squeeze it */
+.calculator-section .container {
+  max-width: 1200px;
+}
