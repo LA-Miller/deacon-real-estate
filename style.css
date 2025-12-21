@@ -233,10 +233,11 @@ a { color: inherit; text-decoration: none; }
 /* Agent Hub Calculator */
 .calculator-frame {
   width: 100%;
-  height: 800px;              /* <-- THIS fixes the issue */
+  height: 550px;              /* <-- THIS fixes the issue */
   border: none;
   border-radius: var(--radius);
   background: #fff;
+  
 }
 
 /* Make it taller on larger screens */
@@ -249,4 +250,112 @@ a { color: inherit; text-decoration: none; }
 /* Ensure container doesn't squeeze it */
 .calculator-section .container {
   max-width: 1200px;
+}
+
+.btn.secondary {
+    background-color: #4b7bff;
+    color: #0a0f18;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+
+.value-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.value-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  margin: 60px 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.social-visual img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-visual {
+    display: none;
+  }
+}
+
+.instagram-section {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.instagram-section h3 {
+  margin-bottom: 20px;
+}
+
+.instagram-embed {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.instagram-embed iframe {
+  width: 100%;
+  min-height: 420px;
+  border: none;
+  border-radius: 12px;
 }
