@@ -703,3 +703,29 @@ a { color: inherit; text-decoration: none; }
 .bio-actions{
   margin-top: auto;
 }
+
+.bio-card p{
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Force the left bio card to match the right media card height */
+.bio-grid {
+  align-items: stretch;
+}
+
+.bio-side {
+  align-self: stretch;
+}
+
+/* Make the media card define the row height */
+.bio-side .image-card {
+  height: 100%;
+}
+
+/* IMPORTANT: give the left card a minimum height that matches your video card */
+.bio-card {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  min-height: calc(400px * (16 / 9)); /* 400px width * aspect ratio */
+}
