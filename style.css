@@ -1,0 +1,641 @@
+:root {
+  /* TODO: Replace these with colors from the Deacon Real Estate logo */
+  --bg: #0b2141;
+  --card: #0b2141;
+  --text: #eaf0ff;
+  --muted: #b7c2dd;
+
+  --primary: #4b7bff;   /* main accent */
+  --primary-2: #2a4bd7; /* hover/darker */
+  --border: rgba(255,255,255,0.10);
+
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(75,123,255,0.18), transparent 60%),
+              radial-gradient(900px 500px at 90% 30%, rgba(75,123,255,0.10), transparent 55%),
+              var(--bg);
+  color: var(--text);
+}
+
+a { color: inherit; text-decoration: none; }
+/* .container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+} */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,23,0.70);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand-logo {
+  height: 80px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--muted);
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.nav-link:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+.nav-link.active { color: var(--text); background: rgba(255,255,255,0.08); }
+
+.nav-cta {
+  border: 1px solid var(--border);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  margin: 5px;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn.primary {
+  background: var(--primary);
+  color: #0a0f18;
+}
+.btn.primary:hover { background: var(--primary-2); }
+
+.btn.secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn.secondary:hover { background: rgba(255,255,255,0.06); }
+
+/* Hero */
+.hero { padding: 56px 0 28px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.hero-subtitle {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.hero-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.video-native {
+  width: 100%;
+  display: block;
+}
+
+/* Bio */
+.bio { padding: 28px 0 56px; }
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.bio-card, .image-card {
+  background: rgba(15,22,35,0.80);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.bio-card { padding: 22px; }
+.section-title { margin: 0 0 10px; font-size: 22px; }
+.bio-card p { color: var(--muted); line-height: 1.7; margin: 0 0 12px; }
+
+.bio-actions { margin-top: 18px; }
+
+.image-card {
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+   
+ }
+
+.headshot1 {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 0;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 5px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-links a { color: var(--muted); }
+.footer-links a:hover { color: var(--text); }
+
+@media (max-width: 900px) {
+  .hero-grid, .bio-grid { grid-template-columns: 1fr; }
+  .nav { gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+}
+
+.calculator-section {
+  padding: 48px 0;
+}
+
+.embed-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.future-resources {
+  padding: 40px 0;
+}
+
+.resource-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Agent Hub Calculator */
+.calculator-frame {
+  width: 100%;
+  height: 550px;              /* <-- THIS fixes the issue */
+  border: none;
+  border-radius: var(--radius);
+  background: #fff;
+  
+}
+
+@media (max-width: 768px) {
+  .calculator-frame {
+    height: 500px;
+  }
+}
+
+/* Make it taller on larger screens */
+@media (min-width: 1024px) {
+  .calculator-frame {
+    height: 900px;
+  }
+}
+
+/* Ensure container doesn't squeeze it */
+.calculator-section .container {
+  max-width: 1200px;
+}
+
+.btn.secondary {
+    background-color: #4b7bff;
+    color: #0a0f18;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+
+.value-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.value-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  margin: 60px 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.social-visual img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-visual {
+    display: none;
+  }
+}
+
+.instagram-section {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.instagram-section h3 {
+  margin-bottom: 20px;
+}
+
+.instagram-embed {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.instagram-embed iframe {
+  width: 100%;
+  min-height: 420px;
+  border: none;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+
+  /* Typography */
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* Hero layouts */
+  .hero-grid,
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide decorative images on small screens */
+  .hero-visual,
+  .social-visual {
+    display: none;
+  }
+
+  /* Value cards spacing */
+  .value-grid {
+    gap: 16px;
+  }
+
+  .value-card {
+    padding: 20px;
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Instagram embed */
+  .instagram-embed iframe {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .hero-grid,
+  .social-grid {
+    gap: 24px;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Instagram Section */
+.instagram-section {
+  margin-top: 72px;
+  text-align: center;
+}
+
+.instagram-section h3 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* Card wrapper */
+.instagram-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Responsive iframe */
+.instagram-frame {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .instagram-frame {
+    height: 460px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .instagram-frame {
+    height: 380px;
+  }
+}
+
+.testimonial-highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  max-width: 720px;
+  margin: 0 0 24px 0;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.top-bar {
+    background: #111;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.top-bar-inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.top-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.top-link:hover {
+    text-decoration: underline;
+}
+
+.top-separator {
+    opacity: 0.6;
+}
+
+.footer-contact {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.footer-contact a {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact span {
+    margin: 0 0.4rem;
+    opacity: 0.6;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    color: inherit;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+/* BIO: force equal-height columns + make image fill the card */
+.bio-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+/* Left card can grow */
+.bio-card {
+  flex: 1;
+}
+
+/* Right column has a consistent width and stretches */
+.bio-side {
+  flex: 0 0 420px;      /* adjust if you want wider/narrower */
+  display: flex;        /* IMPORTANT: lets the child stretch */
+}
+
+/* The image card becomes a true full-height container */
+.bio-side .image-card {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;           /* IMPORTANT: remove padding that shrinks image */
+  overflow: hidden;     /* keeps rounded corners clean */
+  border-radius: var(--radius);
+}
+
+/* Force the actual photo to fill the full height */
+.bio-side .image-card .headshot1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fills without distortion */
+  display: block;       /* removes inline-image whitespace */
+  border-radius: 0;     /* card handles the radius */
+}
+
+/* Mobile: stack and give the image a nice fixed height */
+@media (max-width: 900px) {
+  .bio-grid {
+    flex-direction: column;
+  }
+
+  .bio-side {
+    flex: 1;
+  }
+
+  .bio-side .image-card {
+    height: 420px;
+  }
+}
