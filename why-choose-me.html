@@ -8,6 +8,7 @@
 
     <!-- Correct CSS path -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css"/>
 </head>
 
 <body>
@@ -29,8 +30,8 @@
                 <a class="brand" href="index.html">
                     <img class="brand-logo" src="assets/logo.jpg" alt="Deacon Real Estate logo" />
                 </a>
-                <a class="nav-link active" href="index.html">About Me</a>
-                <a class="nav-link" href="why-choose-me.html">Why Choose Me</a>
+                <a class="nav-link" href="index.html">About Me</a>
+                <a class="nav-link active" href="why-choose-me.html">Why Choose Me</a>
                 <a class="nav-link" href="agent-hub.html">Agent Hub</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
                     class="nav-link nav-cta" target="_blank">
@@ -45,7 +46,7 @@
         <!-- INTRO -->
         <section class="page-intro">
             <div class="container hero-grid">
-                <div class="hero-text">
+                <div class="hero-text reveal-left">
                     <h1>Why Clients Choose Deacon Real Estate</h1>
                     <p class="intro-subtext">
                         Whether you’re buying, selling, or investing, I bring clarity,
@@ -58,18 +59,18 @@
                     </a>
                 </div>
 
-                <div class="hero-visual">
+                <div class="hero-visual reveal-right">
                     <img src="assets/jake2.jpg" alt="Jacob Deacon" />
                 </div>
 
             </div>
         </section>
 
-        <div class="section-divider"></div>
+        <div class="section-divider reveal"></div>
 
         <!-- VALUE SECTIONS -->
         <section class="value-sections">
-            <div class="container value-grid">
+            <div class="container value-grid reveal-stagger">
 
                 <div class="value-card">
                     <h3>Client-First Approach</h3>
@@ -97,14 +98,14 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
+        <div class="section-divider reveal"></div>
 
         <!-- SOCIAL PROOF -->
         <section class="social-proof">
             <div class="container">
                 <!-- ZILLOW ROW -->
                 <div class="social-grid">
-                    <div class="social-text">
+                    <div class="social-text reveal-left">
                         <h2>What Clients Are Saying</h2>
                         <p class="intro-subtext">
                             Real feedback from buyers and sellers I’ve worked with.
@@ -132,15 +133,15 @@
                         </a>
                     </div>
 
-                    <div class="social-visual">
+                    <div class="social-visual reveal-right">
                         <img src="assets/group1.jpg" alt="Deacon Real Estate Team">
                     </div>
                 </div>
 
-                <div class="section-divider"></div>
+                <div class="section-divider reveal"></div>
 
                 <!-- INSTAGRAM ROW -->
-                <div class="instagram-section">
+                <div class="instagram-section reveal-stagger">
                     <h3>Latest on Instagram</h3>
 
                     <div class="instagram-embed">
@@ -151,22 +152,22 @@
                 </div>
 
                 <!-- FINAL CTA -->
-                <div class="final-cta">
+                <!-- <div class="final-cta">
                     <a class="btn primary"
                         href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
                         target="_blank">
                         Schedule a Call
                     </a>
-                </div>
+                </div> -->
             </div>
         </section>
 
     </main>
 
    <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer reveal">
         <div class="container footer-inner">
-            <p>© <span id="year"></span> eXp. All rights reserved.</p>
+            <p>© <span id="year"></span> livindy   . All rights reserved.</p>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/deaconrealestate12" target="_blank" rel="noopener"
                     aria-label="Facebook" class="social-icon">
@@ -207,6 +208,7 @@
         </div>
     </footer>
 
+    <script src="reveal.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>

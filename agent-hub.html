@@ -7,6 +7,7 @@
     <title>Agent Hub | Deacon Real Estate</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css"/>
 </head>
 
 <body>
@@ -28,9 +29,9 @@
                 <a class="brand" href="index.html">
                     <img class="brand-logo" src="assets/logo.jpg" alt="Deacon Real Estate logo" />
                 </a>
-                <a class="nav-link active" href="index.html">About Me</a>
+                <a class="nav-link" href="index.html">About Me</a>
                 <a class="nav-link" href="why-choose-me.html">Why Choose Me</a>
-                <a class="nav-link" href="agent-hub.html">Agent Hub</a>
+                <a class="nav-link active" href="agent-hub.html">Agent Hub</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
                     class="nav-link nav-cta" target="_blank">
                     Book a Meeting
@@ -44,9 +45,9 @@
         <!-- INTRO -->
         <section class="page-intro">
             <div class="container">
-                <h1>Agent Hub</h1>
+                <h1 class="reveal-left">Agent Hub</h1>
 
-                <p class="intro-subtext">
+                <p class="intro-subtext reveal-left">
                     Compare your brokerage with eXp’s numbers. I wasn’t always with eXp, but
                     joining completely changed my career. Your brokerage shouldn’t define you —
                     it should amplify you, support your growth, and help you push toward success
@@ -56,7 +57,7 @@
                     lets you plug in your numbers and see the difference for yourself.
                 </p>
 
-                <a class="btn primary"
+                <a class="btn primary reveal"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdclbopI-u-K8pwTuJBuKX7IKwtZ7r1-WSbY9pI1-oDFVCSww/viewform"
                     target="_blank">
                     Connect With Me
@@ -64,10 +65,10 @@
             </div>
         </section>
 
-        <div class="section-divider"></div>
+        <div class="section-divider reveal"></div>
 
         <!-- CALCULATOR -->
-        <section class="calculator-section">
+        <section class="calculator-section reveal">
             <div class="container">
 
                 <div class="embed-card">
@@ -91,9 +92,9 @@
     </main>
 
  <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer reveal">
         <div class="container footer-inner">
-            <p>© <span id="year"></span> eXp. All rights reserved.</p>
+            <p>© <span id="year"></span> livindy. All rights reserved.</p>
             <div class="footer-socials">
                 <a href="https://www.facebook.com/deaconrealestate12" target="_blank" rel="noopener"
                     aria-label="Facebook" class="social-icon">
@@ -134,6 +135,8 @@
         </div>
     </footer>
 
+    <script src="scroll.js"></script>
+    <script src="reveal.js"></script>
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
