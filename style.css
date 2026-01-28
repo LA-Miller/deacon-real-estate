@@ -1035,6 +1035,14 @@ a { color: inherit; text-decoration: none; }
   margin: 0; /* IMPORTANT: stop old margin rules */
 }
 
+.logo_stars {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-left: 15%;
+}
+
+
 
 
 
